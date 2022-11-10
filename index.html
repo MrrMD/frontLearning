@@ -9,74 +9,75 @@
 
 <body>
 
-    <div class="info">
-        <img src="photo.jpg" alt="тут моя фотка" class="avatar">
-        <h1>Мусаев Джабраил Бишаевич</h1>
-        <p>Я учусь <strong> front-end`y </strong>,
+    <div class="container">
+        <div class="info">
+            <img src="photo.jpg" alt="тут моя фотка" class="avatar">
+            <h1>Мусаев Джабраил Бишаевич</h1>
+            <p>Я учусь <strong> front-end`y </strong>,
                 т.к. решил что <strong>Java</strong>
                 не перспективен.</p>
-        <p>Еще я люблю спать и кушоть</p>
+            <p>Еще я люблю спать и кушоть</p>
+
+            <h4>Мои социальные сети</h4>
+
+
+            <a href="https://vk.com/moreeless" target="_blank">Вконтакте</a>
+            |
+            <a href="https://vk.com/moreeless" target="_blank">Инстаграм</a>
+        </div>
+
+        <div class="card bg-yellow">
+            <h2>Мои хобби</h2>
+            <ol class="list">
+                <li>Back-end</li>
+                <li>Front-end</li>
+                <li>Английский язык</li>
+            </ol>
+        </div>
+
+        <div class="card bg-green">
+            <h2>Опыт работы</h2>
+            <table border="1">
+                <tr>
+                    <th>Компания</th>
+                    <th>Должность</th>
+                    <th>Год</th>
+                </tr>
+                <tr>
+                    <td>EPAM</td>
+                    <td>SoftwareEngineer</td>
+                    <td>2016 - 2017</td>
+                </tr>
+                <tr>
+                    <td>Google</td>
+                    <td>Hr manager</td>
+                    <td>2017 - 2020</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card bg-red">
+            <h2>Youtube курсы</h2>
+            <a href="youtube.html">Посмотреть курсы</a>
+        </div>
+
+        <h2>Связаться со мной</h2>
+        <form action="/">
+            <label for="name">Ваше имя: </label>
+            <input type="text" id="name" placeholder="Введите имя:">
+            <br>
+            <label for="email">Ваша почта: </label>
+            <input type="email" id="email" placeholder="Введите почту:">
+            <br>
+            <label for="age">Ваш возраст: </label>
+            <input type="number" id="age">
+            <br>
+            <label for="text">Ваше сообщение</label>
+            <textarea id="text" rows="4" cols="20"></textarea>
+        </form>
+        <div style="margin-bottom: 500px;"></div>
+
     </div>
-    <hr>
-
-    <div class="social">
-        <h2>Мои социальные сети</h2>
-        <ul type="square">
-            <li><a href="https://vk.com/moreeless" target="_blank">Вконтакте</a></li>
-        </ul>
-    </div>
-    
-    <hr>
-
-    <h2>Мои хобби</h2>
-    <ol>
-        <li>Back-end</li>
-        <li>Front-end</li>
-        <li>Английский язык</li>
-    </ol>
-
-    <hr>
-
-    <h2>Связаться со мной</h2>
-    <form action="/">
-        <label for="name">Ваше имя: </label>
-        <input type="text" id="name" placeholder="Введите имя:">
-        <br>
-        <label for="email">Ваша почта: </label>
-        <input type="email" id="email" placeholder="Введите почту:">
-        <br>
-        <label for="age">Ваш возраст: </label>
-        <input type="number" id="age">
-        <br>
-        <label for="text">Ваше сообщение</label>
-        <textarea id="text" rows="4" cols="20"></textarea>
-    </form>
-
-    <hr>
-
-    <h2>Опыт работы</h2>
-    <table border="1">
-        <tr>
-            <th>Компания</th>
-            <th>Должность</th>
-            <th>Год</th>
-        </tr>
-        <tr>
-            <td>EPAM</td>
-            <td>SoftwareEngineer</td>
-            <td>2016 - 2017</td>
-        </tr>
-        <tr>
-            <td>Google</td>
-            <td>Hr manager</td>
-            <td>2017 - 2020</td>
-        </tr>
-    </table>
-
-    <hr>
-
-    <h2>Youtube курсы</h2>
-    <a href="youtube.html">Посмотреть курсы</a>
 </body>
 
 </html>
