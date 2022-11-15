@@ -29,5 +29,3 @@
 //Уддаление
 // delete developer.experience;
 
-const container = document.querySelector(".info");
-console.log(container);
