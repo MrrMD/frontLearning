@@ -7,6 +7,19 @@ body {
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 } 
 
+.tooltip {
+    left: -50%;
+    bottom: calc(100% + 5px);
+    margin: auto 0;
+
+    background-color: red;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    width: 200px;
+    border: 2px solid blue;
+}
+
+
 /* *{
     padding: 0;
     margin: 0;
