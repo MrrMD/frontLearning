@@ -15,8 +15,42 @@ const tasks = [
         text: 'Выполнить ДЗ после урока',
     },
 ]
+const errorSpan = document.createElement('span');
+errorSpan.className = 'error-message-block';
+
+const createTaskBlock = document.querySelector('.create-task-block');
+createTaskBlock.append(errorSpan);
+createTaskBlock.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const text = document.querySelector('.create-task-block__input').value;
+
+    if(!inputTextValidation(text)) return;
+    
+    tasks.push({
+        id: Date.now().toString,
+        completed: false,
+        text: text,
+    })
+    const taskItem = createTaskItem(tasks[tasks.length-1].id, tasks[tasks.length-1].text);
+    taskListContainer.append(taskItem);
+});
+
+const inputTextValidation = (text) => {
+    const isTaskExists = tasks.some((task) => task.text === text);
+    if (text === ''){
+        errorSpan.textContent = 'Название задачи не должно быть пустым';
+        return false;
+    }else if (isTaskExists){
+        errorSpan.textContent = 'Задача с таким именем уже существует';
+        return false;
+    }else {
+        errorSpan.textContent = "";
+        return true;
+    }
+}
 
 const createTaskItem = (taskId, taksText) => {
+    console.log(tasks);
     const taskItem = document.createElement('div');
     taskItem.className = 'task-item';
     taskItem.dataset.taskId = taskId;
@@ -56,8 +90,6 @@ const createTaskItem = (taskId, taksText) => {
     return taskItem;
 
 };
-
-console.log("asda");
 
 const taskListContainer = document.querySelector('.tasks-list');
 tasks.forEach((task) => {
