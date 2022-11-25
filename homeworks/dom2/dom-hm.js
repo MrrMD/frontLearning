@@ -91,6 +91,36 @@ const createTaskItem = (taskId, taksText) => {
 
 };
 
+const createDeleteForm = (text) => {
+    const modalOverlay = document.createElement('div');
+    modalOverlay.className = 'modal-overlay modal-overlay_hidden';
+
+    const deleteModal = document.createElement('div');
+    deleteModal.clasname = 'delete modal';
+
+    const deleteModalQuestion  = document.createElement('h3');
+    deleteModalQuestion.className = 'delete-modal__question';
+
+    const deleteModalButtons = document.createElement('div');
+    deleteModalButtons.className = 'delete-modal-__buttons';
+
+    const deleteModalButton = document.createElement('button');
+    deleteModalButton.classname = 'delete-modal__button';
+    deleteModalButton.innerText = 'Отмена';
+
+    const deleteModalButton2 = document.createElement('button');
+    deleteModalButton2.classname = 'delete-modal__button';
+    deleteModalButton2.innerText = 'Удалить';
+
+    deleteModalButtons.append(deleteModalButton, deleteModalButton2);
+    deleteModal.append(deleteModalQuestion, deleteModalButtons);
+
+    modalOverlay.append(deleteModal);
+
+    return modalOverlay;
+
+}
+
 const taskListContainer = document.querySelector('.tasks-list');
 tasks.forEach((task) => {
     const taskItem = createTaskItem(task.id, task.text);
